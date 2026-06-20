@@ -176,7 +176,7 @@ class BilibiliBaseIE(InfoExtractor):
             note = f'Downloading video formats for cid {cid}'
 
         return self._download_json(
-            'https://api.bilibili.com/x/player/wbi/playurl', bvid,
+            'https://api.bilibili.com/x/player/playurl', bvid,
             query=self._sign_wbi(params, bvid), headers=headers, note=note)['data']
 
     def json2srt(self, json_data):
